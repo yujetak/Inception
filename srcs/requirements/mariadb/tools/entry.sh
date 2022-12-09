@@ -10,14 +10,14 @@ mysql_install_db --user=root \
 
 rc-update add mariadb && sleep 10
 
-mysql -e "CREATE DATABASE IF NOT EXISTS '${DB}'";
+mysql -e "CREATE DATABASE IF NOT EXISTS '${MARIADB_DB}'";
 
-mysql -e "CREATE USER IF NOT EXISTS '${DB_USER}'@'%' IDENTIFIED BY '${DB_USER_PASSWORD}'";
+mysql -e "CREATE USER IF NOT EXISTS '${MARIADB_DB_USER}'@'%' IDENTIFIED BY '${MARIADB_DB_USER_PASSWORD}'";
 
-mysql -e "GRANT ALL PRIVILEGES ON ${DB}.* TO '${DB_USER}'@'%'";
+mysql -e "GRANT ALL PRIVILEGES ON ${MARIADB_DB}.* TO '${MARIADB_DB_USER}'@'%'";
 
-mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '${ROOT_PASSWORD}'";
+mysql -e "ALTER USER '${MARIADB_ROOT}'@'localhost' IDENTIFIED BY '${MARIADB_ROOT_PASSWORD}'";
 
 myqle -e "FLUSH PRIVILEGES;"
 
-# rc-service mariadb restart
+rc-service mariadb restart
