@@ -26,7 +26,7 @@ clean: down
 
 .PHONY: fclean
 fclean: clean
-	# rm -rf ./db
-	# rm -rf ./wordpress
+	rm -rf /home/yotak/data/database
+	rm -rf /home/yotak/data/wordpress
 .PHONY: re
 re: fclean all
