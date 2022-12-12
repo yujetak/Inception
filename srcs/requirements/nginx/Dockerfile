@@ -21,6 +21,7 @@ RUN openssl req -x509 \
 								-keyout /etc/nginx/ssl/localhost.yotak.key \
 								-out /etc/nginx/ssl/localhost.yotak.crt
 
+RUN apk add openrc
 RUN chmod +x /tmp/run_nginx.sh
 ENTRYPOINT [ "sh", "/tmp/run_nginx.sh" ]
 

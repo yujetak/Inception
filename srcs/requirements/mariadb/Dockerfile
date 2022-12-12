@@ -1,5 +1,7 @@
 FROM alpine:3.16
+# socket 위치 /run/mysqld/mysqld.sock
 RUN mkdir -p /run/mysqld
+# mariadb volumes mount위치
 RUN mkdir -p /var/lib/mysql
 
 RUN apk update && apk upgrade

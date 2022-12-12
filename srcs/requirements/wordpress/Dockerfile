@@ -4,7 +4,7 @@ RUN mkdir -p /var/www/html
 RUN apk update && apk upgrade
 # install package (considering alpine version)
 RUN apk add php8 php8-fpm php8-cli php8-mysqli php8-mbstring php8-xml php8-iconv 
-RUN apk add lighttpd vim
+RUN apk add lighttpd vim wget openrc
 
 RUN apk update
 # nginx access
