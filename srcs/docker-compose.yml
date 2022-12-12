@@ -64,5 +64,3 @@ volumes:
       type: 'none'
       o: 'bind'
       device: '/home/yotak/data/www'
-
-#컨테이너 들여보내줘.......🚷 docker exec -it [container name = docker ps] command경로

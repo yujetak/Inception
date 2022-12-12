@@ -18,6 +18,6 @@ mysql -e "GRANT ALL PRIVILEGES ON ${MARIADB_DB}.* TO '${MARIADB_DB_USER}'@'%'";
 
 mysql -e "ALTER USER '${MARIADB_ROOT}'@'localhost' IDENTIFIED BY '${MARIADB_ROOT_PASSWORD}'";
 
-myqle -e "FLUSH PRIVILEGES;"
+mysql -e "FLUSH PRIVILEGES;"
 
 rc-service mariadb restart
