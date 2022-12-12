@@ -1,10 +1,11 @@
 mkdir -p /home/yotak/data/db
 mkdir -p /home/yotak/data/wordpress
 
-chown -R mysql:mysql /var/lib/mysql/data
-mysql_install_db --user=root \
-                --basedir=/usr \
-                --datadir=/var/lib/mysql
+# chown -R mysql:mysql /var/lib/mysql/data
+# --user myslqd(mysql 서버)를 구동하기 위한 사용자 이름
+# --basedir mysql설치 디렉토리 경로
+# --datadir mysql데이터 디렉토리 경로
+mysql_install_db --user=root --basedir=/usr --datadir=/var/lib/mysql
 
 /usr/bin/mysqld --user=root --datadir=/var/lib/mysql
 
