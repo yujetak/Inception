@@ -10,7 +10,7 @@ services:
     networks:
       - network-inception
     volumes:
-      - /home/yotak/data/database:/var/lib/mysql
+      - database:/var/lib/mysql
     restart: always
 
   wordpress:
@@ -20,12 +20,11 @@ services:
       dockerfile: ./Dockerfile
     env_file: .env
     volumes:
-      - /home/yotak/data/wordpress:/var/www/html
+      - wordpress:/var/www
     networks:
       - network-inception
     depends_on:
       - mariadb
-    restart: always
 
   # nginx
   nginx:
@@ -36,7 +35,7 @@ services:
     networks:
       - network-inception
     volumes:
-      - /home/yotak/data/wordpress:/var/www/html
+      - wordpress:/var/www
     depends_on:
       - wordpress
     ports:

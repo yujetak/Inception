@@ -1,6 +1,7 @@
 # wordpress download
 wget https://wordpress.org/latest.tar.gz && tar -xzvf latest.tar.gz
-mv /wordpress/* /var/www/html
+cp -rf /wordpress/* /var/www > /dev/null
 rm -rf /wordpress latest.tar.gz
-
-exec php-fpm7 -F
+#mariadb 전에 php가 켜지면 안됨!
+sleep 10
+exec php-fpm8 -F
