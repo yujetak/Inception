@@ -23,4 +23,6 @@ mysql -e "FLUSH PRIVILEGES;"
 
 mysqladmin -u root -proot42 shutdown
 
+rc-service mariadb restart
+
 exec php-fpm8 -F

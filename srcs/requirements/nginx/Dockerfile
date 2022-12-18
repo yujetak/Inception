@@ -2,6 +2,7 @@
 # FROM creates a layer from 'alpine:latest' docker image
 FROM alpine:3.16
 # RUN build your application
+RUN apk update && apk upgrade
 RUN apk add nginx
 RUN mkdir -p /var/www/
 # COPY add files from your docker client's current directory
