@@ -12,5 +12,6 @@ echo \
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo docker run hello-world
 
+sudo groupadd docker
 sudo usermod -aG docker yotak
 sudo chown yotak:yotak ~/.docker -R

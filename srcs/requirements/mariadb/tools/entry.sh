@@ -21,7 +21,7 @@ mysql -e "ALTER USER root@'localhost' IDENTIFIED BY root42";
 
 mysql -e "FLUSH PRIVILEGES;"
 
-mysqladmin -u root -proot42 shutdown
+# mysqladmin -u root -proot42 shutdown
 
 rc-service mariadb restart
 
