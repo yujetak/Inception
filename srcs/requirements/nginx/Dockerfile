@@ -3,8 +3,7 @@
 FROM alpine:3.16
 # RUN build your application
 RUN apk add nginx
-RUN apk upgrade && apk update
-# RUN mkdir -p /var/www/html/
+RUN mkdir -p /var/www/
 # COPY add files from your docker client's current directory
 COPY ./tools/entry.sh /tmp/run_nginx.sh
 COPY ./conf/nginx.conf /etc/nginx/nginx.conf

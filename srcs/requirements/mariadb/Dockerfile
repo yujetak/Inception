@@ -4,18 +4,17 @@ RUN mkdir -p /run/mysqld
 # mariadb volumes mount위치
 RUN mkdir -p /var/lib/mysql
 
-RUN apk update && apk upgrade
-
-RUN apk add openrc
 RUN apk add mariadb mariadb-common mariadb-client mariadb-server-utils
+RUN apk add openrc
+
+RUN apk update && apk upgrade
 
 COPY ./conf/my.cnf /etc/my.cnf
 COPY ./conf/my.cnf /etc/mysql/my.cnf
 COPY ./tools/entry.sh /tmp/run_mariadb.sh
 
 RUN chown -R mysql:mysql /var/lib/mysql
-RUN chmod 777 -R /var/run/mysqld
-RUN chmod 777 -R /var/lib/mysql
+RUN chmod 777 /var/lib/mysql
 
 RUN chmod +x /tmp/run_mariadb.sh
 ENTRYPOINT ["sh", "/tmp/run_mariadb.sh"]
