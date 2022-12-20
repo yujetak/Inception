@@ -12,6 +12,7 @@ RUN apk add openrc
 
 RUN apk update && apk upgrade
 
+# TODO : why three?
 COPY ./conf/my.cnf ~/my.cnf
 COPY ./conf/my.cnf /etc/my.cnf
 COPY ./conf/my.cnf /etc/mysql/my.cnf
