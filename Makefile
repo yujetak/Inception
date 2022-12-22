@@ -1,4 +1,4 @@
-VOLUME_DIR	:=	.
+VOLUME_DIR	:=	/Users/yuje/Downloads/Inception
 
 # DOCKER_COMPOSE	:=	docker compose
 # DOCKER_COMPOSE	:=	/goinfre/yotak/chrome_download/docker-compose-darwin-x86_64
