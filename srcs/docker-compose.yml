@@ -52,7 +52,7 @@ volumes:
     name: db-v
     driver: local
     driver_opts:
-      device: '/Users/yuje/Downloads/Inception/db'
+      device: '/home/yotak/data/db'
       type: 'none'
       o: 'bind'
 
@@ -60,6 +60,6 @@ volumes:
     name: www-v
     driver: local
     driver_opts:
-      device: '/Users/yuje/Downloads/Inception/wordpress'
+      device: '/home/yotak/data/wordpress'
       type: 'none'
       o: 'bind'

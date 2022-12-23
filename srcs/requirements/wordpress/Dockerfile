@@ -40,8 +40,8 @@ RUN apk update
 RUN adduser -u 82 -D -S -G www-data www-data
 RUN chown -R www-data:www-data /var/www
 
-COPY ./conf/wp-config.php /var/www/wp-config.php
 COPY ./conf/www.conf /etc/php8/php-fpm.d/www.conf
+COPY ./conf/wp-config.php /tmp/wp-config.php
 COPY ./tools/entry.sh /tmp/run_wordpress.sh
 
 RUN chmod +x /tmp/run_wordpress.sh

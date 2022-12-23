@@ -1,6 +1,5 @@
-# mkdir -p /home/yotak/data/db
-# mkdir -p /home/yotak/data/www
-sudo apt remove golang-docker-credential-helpers
+mkdir -p /home/yotak/data/db
+mkdir -p /home/yotak/data/wordpress
 # --user myslqd(mysql 서버)를 구동하기 위한 사용자 이름
 # --basedir mysql설치 디렉토리 경로
 # --datadir mysql데이터 디렉토리 경로

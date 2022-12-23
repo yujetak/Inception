@@ -9,13 +9,9 @@ RUN apk add mariadb \
             mariadb-client \
             mariadb-server-utils
 RUN apk add openrc
-
 RUN apk update && apk upgrade
 
-# TODO : why three?
-COPY ./conf/my.cnf ~/my.cnf
 COPY ./conf/my.cnf /etc/my.cnf
-COPY ./conf/my.cnf /etc/mysql/my.cnf
 
 RUN chown -R mysql:mysql /var/lib/mysql
 RUN chmod 777 /var/lib/mysql

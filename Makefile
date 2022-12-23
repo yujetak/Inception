@@ -1,17 +1,12 @@
-VOLUME_DIR	:=	/Users/yuje/Downloads/Inception
+VOLUME_DIR	:=	/home/yotak/data
 
-# DOCKER_COMPOSE	:=	docker compose
-# DOCKER_COMPOSE	:=	/goinfre/yotak/chrome_download/docker-compose-darwin-x86_64
-DOCKER_COMPOSE	:=	/Users/yuje/Downloads/docker-compose-darwin-x86_64
+DOCKER_COMPOSE	:=	docker compose
 DOCKER_COMPOSE_FILE	:=	./srcs/docker-compose.yml
 PROJECT_NAME	:=	Inception
 DOCKER_NAME_LIST := $(docker ps -a -q)
 
 .PHONY:	all
 all:
-	mkdir -p $(VOLUME_DIR)/db
-	mkdir -p $(VOLUME_DIR)/wordpress
-	chmod +x $(DOCKER_COMPOSE)
 	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) up --build
 
 .PHONY:	build
@@ -20,6 +15,8 @@ build:
 
 .PHONY:	up
 up:
+	mkdir -p $(VOLUME_DIR)/db
+	mkdir -p $(VOLUME_DIR)/wordpress
 	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) up
 
 .PHONY:	down
