@@ -36,17 +36,15 @@ wp user create \
 							--role=author \
 							--user_pass=yuje42
 echo "=======wp theme install======="
-wp theme install storefront \
-								--path=/var/www \
+wp theme install twentytwentyone \
+								--allow-root --path=/var/www \
 								--url=yotak.42.fr \
 								--force \
 								--activate
 echo "=======wp theme update======="
-wp theme update storefront \
-								--path=/var/www \
+wp theme update twentytwentyone \
+								--allow-root --path=/var/www \
 								--url=yotak.42.fr
-echo "=======wp theme activate======="
-wp theme activate storefront
 
 #mariadb 전에 php가 켜지면 안됨!
 sleep 5
