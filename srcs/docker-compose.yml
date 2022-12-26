@@ -1,6 +1,5 @@
 version: '3'
 services:
-  # mariadb
   mariadb:
     build:
       context: ./requirements/mariadb
@@ -26,7 +25,6 @@ services:
     depends_on:
       - mariadb
 
-  # nginx
   nginx:
     container_name: nginx
     build:
@@ -41,7 +39,6 @@ services:
     ports:
       - 443:443
 
-# network
 networks:
   network-inception:
     name: network-inception

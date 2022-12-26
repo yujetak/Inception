@@ -45,6 +45,6 @@ COPY ./conf/wp-config.php /tmp/wp-config.php
 COPY ./tools/entry.sh /tmp/run_wordpress.sh
 
 RUN chmod +x /tmp/run_wordpress.sh
-EXPOSE 9000
-
 ENTRYPOINT [ "sh", "/tmp/run_wordpress.sh" ]
+
+EXPOSE 9000

@@ -3,10 +3,14 @@ VOLUME_DIR	:=	/home/yotak/data
 DOCKER_COMPOSE	:=	docker compose
 DOCKER_COMPOSE_FILE	:=	./srcs/docker-compose.yml
 PROJECT_NAME	:=	Inception
+NETWORK_NAME := network-inception
 DOCKER_NAME_LIST := $(docker ps -a -q)
 
 .PHONY:	all
 all:
+	@./install_docker.sh
+	@mkdir -p $(VOLUME_DIR)/db
+	@mkdir -p $(VOLUME_DIR)/wordpress
 	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) up --build
 
 .PHONY:	build
@@ -15,8 +19,6 @@ build:
 
 .PHONY:	up
 up:
-	mkdir -p $(VOLUME_DIR)/db
-	mkdir -p $(VOLUME_DIR)/wordpress
 	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) up
 
 .PHONY:	down
@@ -25,21 +27,12 @@ down:
 
 .PHONY: clean
 clean: down
-	docker system prune -f -a
-	docker volume prune -f
+	docker system prune -f --all --volumes
 
 .PHONY: fclean
 fclean: clean
-	rm -rf $(VOLUME_DIR)/db/*
-	rm -rf $(VOLUME_DIR)/wordpress/*
+	@rm -rf $(VOLUME_DIR)/db/*
+	@rm -rf $(VOLUME_DIR)/wordpress/*
+
 .PHONY: re
 re: fclean all
-
-##
-# 1. mariadb setting
-# 2. makefile
-# 3. volumes 경로 주의
-# 4. sleep -> health check로 바꾸면 굉장히 좋긴 함
-# 5. 오늘 바꾼거: nginx.conf, wp-config.php COPY 경로, USER => USER_ID (이름 겹침)
-# 6. init process 공부하기
-##

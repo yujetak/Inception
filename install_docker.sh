@@ -5,8 +5,8 @@ sudo apt-get install \
     ca-certificates \
     curl \
     gnupg \
-    lsb-release
-
+    lsb-release \
+    git
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 echo \
@@ -28,5 +28,5 @@ sudo chmod 666 /var/run/docker.sock
 
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chmod g+rwx "$HOME/.docker" -R
-
+# host register
 sudo echo "127.0.0.1 yotak.42.fr" >> /etc/hosts
