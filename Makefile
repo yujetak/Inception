@@ -35,3 +35,6 @@ fclean: clean
 
 .PHONY: re
 re: fclean all
+
+.PHONY: host
+	sudo echo "127.0.0.1 yotak.42.fr" >> /etc/hosts

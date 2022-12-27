@@ -30,4 +30,4 @@ wp user create \
 
 #mariadb 전에 php가 켜지면 안됨!
 sleep 5
-exec php-fpm8 -F
+exec php-fpm8 -F -R
