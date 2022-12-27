@@ -10,10 +10,6 @@ all:
 	@mkdir -p $(VOLUME_DIR)/wordpress
 	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) up --build
 
-.PHONY:	build
-build:
-	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) -p $(PROJECT_NAME) build
-
 .PHONY:	up
 up:
 	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) up
