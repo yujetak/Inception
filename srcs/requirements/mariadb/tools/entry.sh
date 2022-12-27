@@ -4,8 +4,7 @@
 # https://pyrasis.com/book/DockerForTheReallyImpatient/Chapter16/02
 mysql_install_db --user=root --basedir=/usr --datadir=/var/lib/mysql
 
-# CREATE랑 GRANT사이에 들어가면 폭발....-- FLUSH PRIVILEGES;
-# GRANT ALL에서 IDENTIFIED BY $USER_PASSWORD
+# mysql은 설치 후 root와 *패스워드가 없는*익명 사용자를 자동으로 만듦
 cat > /tmp/mysql_init << EOF
 FLUSH PRIVILEGES;
 
@@ -20,7 +19,7 @@ GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$USER_ID'@'%';
 
 FLUSH PRIVILEGES;
 EOF
-
+# mysql 스크립트 활성화
 /usr/bin/mysqld --user=root --bootstrap < /tmp/mysql_init
-
+# mysqld 활성화
 /usr/bin/mysqld --user=root
