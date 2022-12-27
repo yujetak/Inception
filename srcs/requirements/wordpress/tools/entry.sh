@@ -9,7 +9,7 @@ mv wp-cli.phar /usr/local/bin/wp
 
 # wp-cli download
 cd /var/www
-wp core download --allow-root --path=/var/www # ㅇㅕ기까지 너 무 잘 됨
+wp core download --allow-root --path=/var/www
 
 cp /tmp/wp-config.php /var/www
 
@@ -29,4 +29,4 @@ wp user create \
 
 #mariadb 전에 php가 켜지면 안됨!
 sleep 5
-exec php-fpm8 -F -R
+exec php-fpm8 -F
