@@ -26,12 +26,12 @@ down:
 
 .PHONY: clean
 clean: down
-	docker system prune -f --all --volumes
+	docker system prune -f --all
 
 .PHONY: fclean
 fclean: clean
 	@rm -rf $(VOLUME_DIR)/db/*
 	@rm -rf $(VOLUME_DIR)/wordpress/*
-
+	@docker volume rm $$(docker volume ls -q)
 .PHONY: re
 re: fclean all
