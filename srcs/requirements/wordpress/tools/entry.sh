@@ -13,8 +13,7 @@ wp core download --allow-root --path=/var/www # ㅇㅕ기까지 너 무 잘 됨
 
 cp /tmp/wp-config.php /var/www
 
-wp core install \
-								--allow-root --path=/var/www \
+wp core install --allow-root --path=/var/www \
 								--url=yotak.42.fr \
 								--title=Inception \
 								--admin_user=yotak \

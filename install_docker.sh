@@ -18,3 +18,5 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plu
 
 sudo groupadd docker
 sudo usermod -aG docker yotak
+
+echo '127.0.0.1 yotak.42.fr' | sudo tee -a /etc/hosts

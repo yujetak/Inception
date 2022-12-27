@@ -8,10 +8,16 @@ mysql_install_db --user=root --basedir=/usr --datadir=/var/lib/mysql
 # GRANT ALL에서 IDENTIFIED BY $USER_PASSWORD
 cat > /tmp/mysql_init << EOF
 FLUSH PRIVILEGES;
+
+ALTER USER root@localhost IDENTIFIED VIA mysql_native_password USING PASSWORD("'$DB_ROOT_PASSWORD'");
+DELETE FROM mysql.user WHERE User='';
+DROP DATABASE IF EXISTS test;
+DELETE FROM mysql.db WHERE Db='test' OR Db='test\\_%';
+
 CREATE DATABASE IF NOT EXISTS $DB_NAME;
 CREATE USER IF NOT EXISTS '$USER_ID'@'%' IDENTIFIED BY '$USER_PASSWORD';
 GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$USER_ID'@'%';
-ALTER USER 'root'@'localhost' IDENTIFIED BY '$DB_ROOT_PASSWORD';
+
 FLUSH PRIVILEGES;
 EOF
 
