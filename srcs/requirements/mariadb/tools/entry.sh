@@ -1,3 +1,6 @@
+# chown: /auth_pam_tool_dir/auth_pam_tool: No such file or directory error
+mkdir /auth_pam_tool_dir
+touch /auth_pam_tool_dir/auth_pam_tool
 # mysql_install_db: MariaDB 초기화
 # --user myslqd(mysql 서버)를 구동하기 위한 사용자 이름
 # --basedir mysql설치 디렉토리 경로
