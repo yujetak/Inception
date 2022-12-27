@@ -1,3 +1,3 @@
-# nginx 웹 서버를 foreground로 실행(기본이 background)
-# 그렇지 않으면 컨테이너를 생성해도 바로 꺼진다고 함
+# nginx는 기본으로 daemon으로 실행되는데 background에서 실행되면
+# 컨테이너가 앱이 종료된 것으로 간주하여 nginx가 종료됨
 exec nginx -g "daemon off;"
