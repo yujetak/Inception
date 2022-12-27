@@ -24,3 +24,5 @@ EOF
 /usr/bin/mysqld --user=root --bootstrap < /tmp/mysql_init
 # mysqld 활성화
 /usr/bin/mysqld --user=root
+
+# 확인! https://umbum.dev/343
