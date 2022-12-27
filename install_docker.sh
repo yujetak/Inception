@@ -22,6 +22,3 @@ sudo groupadd docker
 sudo usermod -aG docker yotak
 # 로컬에서 개발을 진행할 때 로컬에서만 사용할 도메인과 IP주소 연결
 echo '127.0.0.1 yotak.42.fr' | sudo tee -a /etc/hosts
-
-# if .docker/config.json: permission
-# sudo chown yotak:yotak /home/yotak/.docker -R
