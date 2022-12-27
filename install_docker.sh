@@ -20,6 +20,8 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plu
 # 관리자 외의 사용하도 도커를 사용할 수 있도록 설정
 sudo groupadd docker
 sudo usermod -aG docker yotak
+# config.json file permission error
+sudo chown yotak:yotak /home/yotak/.docker -R
 # 로컬에서 개발을 진행할 때 로컬에서만 사용할 도메인과 IP주소 연결
 echo '127.0.0.1 yotak.42.fr' | sudo tee -a /etc/hosts
 # 리부트 해줍시다
