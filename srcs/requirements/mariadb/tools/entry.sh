@@ -11,7 +11,6 @@ mysql_install_db --user=root \
 
 # mysql은 설치 후 root와 *패스워드가 없는*익명 사용자를 자동으로 만듦
 cat > /tmp/mysql_init << EOF
-cat > /tmp/mysql_init << EOF
 FLUSH PRIVILEGES;
 CREATE DATABASE IF NOT EXISTS $DB_NAME;
 CREATE USER IF NOT EXISTS '$USER_ID'@'%' IDENTIFIED BY '$USER_PASSWORD';
@@ -24,5 +23,3 @@ EOF
 /usr/bin/mysqld --user=root --bootstrap < /tmp/mysql_init
 # mysqld 활성화
 /usr/bin/mysqld --user=root
-
-# 확인! https://umbum.dev/343
