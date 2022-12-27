@@ -16,3 +16,5 @@ FLUSH PRIVILEGES;
 EOF
 
 /usr/bin/mysqld --user=root --bootstrap < /tmp/mysql_init
+
+/usr/bin/mysqld --user=root

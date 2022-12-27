@@ -8,7 +8,6 @@ DOCKER_NAME_LIST := $(docker ps -a -q)
 
 .PHONY:	all
 all:
-	@./install_docker.sh
 	@mkdir -p $(VOLUME_DIR)/db
 	@mkdir -p $(VOLUME_DIR)/wordpress
 	$(DOCKER_COMPOSE) -f $(DOCKER_COMPOSE_FILE) up --build
