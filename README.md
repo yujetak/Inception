@@ -1,5 +1,5 @@
 # Inception
-# Docker(🐬개념)
+# 🐬🐬Docker(🐬개념)
 
 <aside>
 🎃 컨테이너(container)를 실행, 관리하는 오픈소스 플랫폼
@@ -105,7 +105,7 @@ docker build -t [docker-image] [Dockerfile 경로]
 - 좀비 프로세스의 처리를 담당한다
 - ENTRYPOINT로 지정한 명령어가 PID1이 된다
 
-# Docker(과제 실습)
+# 🐬🐬Docker(🐬과제 실습)
 # Mandatory part
 
 - NGINX TLSv1.2 or TLSv1.3 only (TLS: 인터넷 프로토콜)
