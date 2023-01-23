@@ -174,15 +174,18 @@ docker build -t [docker-image] [Dockerfile 경로]
 
 👩‍💻 ubuntu server
 
-![Screen Shot 2022-12-18 at 4.07.37 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/778499a5-2401-452a-b51a-f32485d8accc/Screen_Shot_2022-12-18_at_4.07.37_PM.png)
+🗳️ virtual box port forwarding
+hostport 4242, guestport 22
 
 - sudo apt-get install openssh-server git make -y
 - ssh-keygen && cat ~/.ssh/id_rsa.pub
 - sudo apt update -y && sudo apt upgrade -y
     
-    if (update error)ss
+    > if (update error)ss
     
-    ![Screen Shot 2022-12-28 at 7.51.22 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1302a633-eb75-4d6c-834b-4bd864e22fa6/Screen_Shot_2022-12-28_at_7.51.22_AM.png)
+    sudo dpkg -r snapd gnome-software-plugin-snap
+    sudo apt update
+    sudo apt full-apgrade
     
 
 🖥 vscode
@@ -200,10 +203,6 @@ docker build -t [docker-image] [Dockerfile 경로]
 - [https://ithemes.com/blog/wordpress-wp-config-php-file-explained/](https://ithemes.com/blog/wordpress-wp-config-php-file-explained/)
 
 # 3.  MariaDB
-
-![Screen Shot 2022-12-19 at 11.58.30 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/799400ed-2739-45c3-a6e8-c859b662bebf/Screen_Shot_2022-12-19_at_11.58.30_AM.png)
-
-![Screen Shot 2022-12-19 at 3.53.11 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0e7f6ae-ff0e-40be-b15e-83982ba4007d/Screen_Shot_2022-12-19_at_3.53.11_PM.png)
 
 🚨 error 발생 → 해결 volume 이름이랑 컨테이너 이름이랑 같았다🤕
 
