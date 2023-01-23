@@ -190,7 +190,7 @@ hostport 4242, guestport 22
 
 🖥 vscode
 
-- ssh yotak@localhost -p 4242
+- ssh {USER}@localhost -p 4242
 
 # 2. wordpress
 
