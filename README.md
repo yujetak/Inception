@@ -184,7 +184,9 @@ hostport 4242, guestport 22
     > if (update error)ss
     
     sudo dpkg -r snapd gnome-software-plugin-snap
+    
     sudo apt update
+    
     sudo apt full-apgrade
     
 
