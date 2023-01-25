@@ -195,6 +195,7 @@ hostport 4242, guestport 22
 - ssh {USER}@localhost -p 4242
 
 # 2. wordpress
+🧚우다다다 적고 물어보고 적고 물어보고 실습해서 정리본이 없는...코드 주석으로 있을지도!
 
 ## php-fpm configure
 
@@ -205,6 +206,7 @@ hostport 4242, guestport 22
 - [https://ithemes.com/blog/wordpress-wp-config-php-file-explained/](https://ithemes.com/blog/wordpress-wp-config-php-file-explained/)
 
 # 3.  MariaDB
+🧚우다다다 적고 물어보고 적고 물어보고 실습해서 정리본이 없는...코드 주석으로 있을지도!
 
 🚨 error 발생 → 해결 volume 이름이랑 컨테이너 이름이랑 같았다🤕
 
