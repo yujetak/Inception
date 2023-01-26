@@ -233,3 +233,6 @@ hostport 4242, guestport 22
 2. docker build -t wordpress-image . (wordpress-image라는 이미지를 현재 위치에 빌드)
 3. docker run -it --name wordpress wordpress-i
 4. docker exec -it [container name = docker ps] [command경로 = /bin/sh]
+
+## 🤔💭 생각해보면 좋았을 것!
+sh와 Dockerfile에서 할 일을 의미적으로 나누기! 설치나 셋팅 등등이 막 섞여 있는데 과연 어떻게 나누면 좋았을까
