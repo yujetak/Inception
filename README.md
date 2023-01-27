@@ -84,7 +84,7 @@ docker build -t [docker-image] [Dockerfile 경로]
 - [yaml-ports] host OS와 container 내부의 `포트를 바인딩`
     - expose? 컨테이너에게만 포트를 공개, host OS와 직접 연결되지 않음
 - [yaml-depends_on] 종속관계 표현, depends_on에 명시된 컨테이너가 먼저 실행됨. 하지만 완전히 실행될 때까지 기다려주는건 아님(HEALTH CHECK or sleep으로 기다리기)
-- [yaml-networks] networks에 언급된 네트워크를 참고, 기본 방식인 bridge는 호스트의 네트워크와 게스트의 네트워크를 연결(bridge)하여 하나의 네트워크처럼 사용하는 방식
+- [yaml-networks] networks에 언급된 네트워크를 참고, 기본 방식인 bridge는 호스트의 네트워크와 게스트의 네트워크를 연결(bridge)하여 하나의 네트워크처럼 사용하는 방식(가상의 네트워크)
 
 ## Dockerfile vs Docker Compose
 
@@ -196,6 +196,7 @@ hostport 4242, guestport 22
 
 # 2. wordpress
 🧚우다다다 적고 물어보고 적고 물어보고 실습해서 정리본이 없는...코드 주석으로 있을지도!
+## nginx:웹서버, wordpress: 웹사이트 제작 
 
 ## php-fpm configure
 
